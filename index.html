@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacode Loan Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loan-calculator">
+        <!-- Error message that will appear when input is invalid -->
+        <div id="error-message" class="hidden error-message">
+            Wetin you dey do chief
+        </div>
+
+        <h2>Bacode Loan Calculator</h2>
+        
+        <div class="visible">
+            <div class="input-group">
+                <label for="loan-amount">₦</label>
+                <input type="number" id="loan-amount" placeholder="Loan Amount" min="1" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="interest-rate">%</label>
+                <input type="number" id="interest-rate" placeholder="Interest" min="1" required>
+            </div>
+            
+            <div class="repay">
+                <input type="number" id="repay-time" placeholder="Repay Time (Years)" min="1" required>
+            </div>
+        </div>
+
+        <button class="calculate">Calculate</button>
+
+        <!-- Throbber/spinner shown when calculations are processing -->
+        <div id="throbber" class="hidden throbber"></div>
+
+        <div id="repayment-plan" class="hide">
+            <h3>Repayment Plan</h3>
+            <div class="output-group">
+                <label for="monthly-payment">Monthly Payment</label>
+                <input type="text" id="monthly-payment" readonly>
+            </div>
+            <div class="output-group">
+                <label for="total-payment">Total Payment</label>
+                <input type="text" id="total-payment" readonly>
+            </div>
+            <div class="output-group">
+                <label for="total-interest">Total Interest</label>
+                <input type="text" id="total-interest" readonly>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
